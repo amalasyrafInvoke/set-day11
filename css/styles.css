@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #a9b1c5;
+}
+
+#container {
+  width: 700px;
+  height: 500px;
+  margin: 2rem auto;
+  background-color: #d4d9e3;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#keyboard-elem {
+  width: 90%;
+  height: 95%;
+  background-color: black;
+  margin: 1rem;
+  border-radius: 20px;
+}
+
+#upper-keyboard,
+#lower-keyboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  /* overflow: hidden; */
+}
+
+#speaker {
+  background-color: #d4d9e3;
+  height: 230px;
+  width: 230px;
+  margin: 5px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.line-dot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#mixer {
+  background-image: url(../images/image5.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 96%;
+  width: 60%;
+  border-radius: 25px;
+}
+
+.keyboard-btn {
+  width: calc(100% / 6);
+  background-color: #d4d9e3;
+  height: 230px;
+  margin: 10px 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.75s;
+}
+
+.keyboard-btn:hover {
+  background-color: lightgray;
+}
+
+.clickAniBtn {
+  animation-name: clickAni;
+  animation-duration: 0.25s;
+}
+
+@keyframes clickAni {
+  from {
+    background-color: #d4d9e3;
+    transform: translateY(0);
+  }
+  to {
+    background-color: whitesmoke;
+    transform: translateY(5px);
+  }
+}
+
+.btn-inner {
+  height: 80%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 50px;
+  box-shadow: 7px 6px 28px 1px rgba(8, 7, 7, 0.24);
+  transition: all 0.25s;
+}
+
+#info {
+  width: 5%;
+  height: 95%;
+  margin: 1rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#square-dot {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#vertical-dot {
+  height: 100px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  background-color: black;
+  height: 6px;
+  width: 6px;
+  margin: 2px;
+  border-radius: 50%;
+}
+
+#name {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+  flex-grow: 0.5;
+}
